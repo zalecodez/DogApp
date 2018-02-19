@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<form action='/' method='POST' enctype='multipart/form-data'>
+	<div class='form-group' >
+		<label for='imagefile'>Upload Image of Dog or Human Face</label>
+		<input type='file' class='form-control-file' name='imagefile' id='imagefile'/>
+		<button type='submit' class='btn btn-primary'> Submit </button>
+	</div>
+</form>
+
+{% endblock %}
