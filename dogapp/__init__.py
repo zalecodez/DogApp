@@ -1,0 +1,1 @@
+from .dogapp import app

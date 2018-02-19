@@ -1,0 +1,8 @@
+MANIFEST.in
+dogapp/__init__.py
+dogapp/dogapp.py
+dogapp.egg-info/PKG-INFO
+dogapp.egg-info/SOURCES.txt
+dogapp.egg-info/dependency_links.txt
+dogapp.egg-info/requires.txt
+dogapp.egg-info/top_level.txt
