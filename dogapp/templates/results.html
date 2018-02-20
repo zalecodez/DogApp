@@ -2,5 +2,16 @@
 {% block body %}
 
 <img src={{ filename }} class='img-responsive'/>
+<h2>{{ breed_results }}</h2>
+
+<h3>Upload another image:</h3>
+<form action='/' method='POST' enctype='multipart/form-data'>
+	<div class='form-group' >
+		<label for='imagefile'>Upload Image of Dog or Human Face</label>
+		<input type='file' class='form-control-file' name='imagefile' id='imagefile'/>
+		<button type='submit' class='btn btn-primary'> Submit </button>
+	</div>
+</form>
+
 
 {% endblock %}
