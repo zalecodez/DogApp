@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath dogapp dogapp.app
+web: gunicorn -t 120 --pythonpath dogapp dogapp:app
