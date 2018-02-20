@@ -9,9 +9,10 @@ cycler==0.10.0
 dask==0.17.0
 decorator==4.2.1
 distributed==1.21.0
--e git+https://github.com/zalecodez/DogApp.git@c35edf9f13fa168d939eb96261067b45f8111c88#egg=dogapp
+-e git+https://github.com/zalecodez/DogApp.git@ae1e3dc8ddfc8e33af1049ec9aabe4cdd5c84f46#egg=dogapp
 entrypoints==0.2.3
 Flask==0.12.2
+gunicorn==19.7.1
 h5py==2.7.1
 heapdict==1.0.0
 html5lib==1.0.1
