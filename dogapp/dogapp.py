@@ -2,10 +2,11 @@ import os
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash
 from werkzeug.utils import secure_filename
 
-from .detector import *
+from detector import *
 
 DIR_PATH = os.getcwd()
-UPLOAD_FOLDER = os.path.join(DIR_PATH,'dogapp','static','images')
+#UPLOAD_FOLDER = os.path.join(DIR_PATH,'dogapp','static','images')
+UPLOAD_FOLDER = os.path.join(DIR_PATH,'static','images')
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 app = Flask(__name__)
@@ -38,8 +39,11 @@ def upload_file():
 @app.route('/results')
 def results():
 	filename = os.path.join('images',request.args['filename'])
-	breed = dog_breed_detector(os.path.join('dogapp','static',filename))
+	#breed = dog_breed_detector(os.path.join('dogapp','static',filename))
+	breed = dog_breed_detector(os.path.join('static',filename))
 	breed = breed.replace('_',' ').title()
 	filename = url_for('static', filename=filename)
 	return render_template('results.html', filename=filename, breed_results=breed)
 
+if __name__ == '__main__':
+	app.run(debug=True)
